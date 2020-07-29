@@ -13,7 +13,8 @@ const quotes = [
   'Keep going, you\'re doing well.',
   'Stay positive; stay hopeful'.
   'Appear weak when you are strong, and strong when you are weak.',
-  'The supreme art of war is to subdue the enemy without fighting.'
+  'The supreme art of war is to subdue the enemy without fighting.',
+  'Supreme excellence consists of breaking the enemy`s resistance without fighting.'
 ];
 
 async function getImage() {
