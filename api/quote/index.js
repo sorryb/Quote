@@ -11,7 +11,7 @@ const quotes = [
   'You\'re capable of more than you can even dream.',
   'You deserve the best.',
   'Keep going, you\'re doing well.',
-  'Stay positive; stay hopeful'.
+  'Stay positive; stay hopeful',
   'Appear weak when you are strong, and strong when you are weak.',
   'The supreme art of war is to subdue the enemy without fighting.',
   'Supreme excellence consists of breaking the enemy s resistance without fighting.',
