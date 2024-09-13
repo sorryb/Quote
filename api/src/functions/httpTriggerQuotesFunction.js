@@ -2,7 +2,7 @@ const { app } = require('@azure/functions');
 
 const https = require('https');
 
-const unplashApi = 'https://source.unsplash.com/1600x900?dream';
+const unplashApi = 'https://picsum.photos/1600/900'; //'https://api.unsplash.com/1600x900?dream';
 const quotes = [
   'Wherever you go, no matter what the weather, always bring your own sunshine.',
   'You\’re awesome.',
@@ -37,10 +37,10 @@ app.http('httpTriggerQuotesFunction', {
         context.log(`Http function processed request for url "${request.url}"`);
 
         const image = await getImage();
-        const text = quotes[Math.floor(Math.random() * quotes.length)];
+        const quoteText = quotes[Math.floor(Math.random() * quotes.length)];
 
         return {
-            body: JSON.stringify( {   image,   text } ),  
+            body: JSON.stringify( {   image: image,   text: quoteText } ),  
             headers: { 'Content-Type': 'application/json' }
         };
     }
