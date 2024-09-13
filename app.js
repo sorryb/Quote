@@ -3,7 +3,7 @@ async function displayQuote() {
 
   try {
     // Fetch quote object from API
-    let response = await fetch('/api/quote');
+    let response = await fetch(`/api/httpTriggerQuotesFunction`); 
     quote = await response.json();
 
     // Preload image
@@ -21,5 +21,22 @@ async function displayQuote() {
   const div = document.getElementById('quote');
   div.textContent = quote.text;
 }
+async function displayWords()
+{
+ // const {test} = await( await fetch(`/api/httpTriggerWaitAMomentFunction?name=sorin`)).json();
+
+var  textOfQuote;
+  //let response = await fetch(`/api/httpTriggerWaitAMomentFunction?name=sorin1`);
+  let response = await fetch(`/api/httpTriggerWaitAMomentFunction`); 
+  if (response.headers.get('content-type').includes('application/json')) {
+     textOfQuote = await response.json();
+    console.log(textOfQuote.message);
+} else {
+     textOfQuote = await response.text();
+    console.log(textOfQuote.message);  // This will output the plain text: "Hello, sorin1!"
+}
+  document.querySelector('#name').textContent = textOfQuote.message;
+}
 
 displayQuote();
+displayWords();

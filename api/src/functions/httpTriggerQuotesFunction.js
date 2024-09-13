@@ -1,3 +1,5 @@
+const { app } = require('@azure/functions');
+
 const https = require('https');
 
 const unplashApi = 'https://source.unsplash.com/1600x900?dream';
@@ -28,16 +30,18 @@ async function getImage() {
   });
 }
 
-module.exports = async function (context, req) {
-  context.log('JavaScript HTTP trigger function processed a request.');
+app.http('httpTriggerQuotesFunction', {
+    methods: ['GET', 'POST'],
+    authLevel: 'anonymous',
+    handler: async (request, context) => {
+        context.log(`Http function processed request for url "${request.url}"`);
 
-  const image = await getImage();
-  const text = quotes[Math.floor(Math.random() * quotes.length)];
+        const image = await getImage();
+        const text = quotes[Math.floor(Math.random() * quotes.length)];
 
-  context.res = {
-    body: {
-      image,
-      text
+        return {
+            body: JSON.stringify( {   image,   text } ),  
+            headers: { 'Content-Type': 'application/json' }
+        };
     }
-  };
-};
+});
