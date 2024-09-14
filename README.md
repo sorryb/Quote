@@ -4,7 +4,7 @@ I started from here: [Azure SWAG](https://docs.microsoft.com/azure/static-web-ap
 
 
 It includes a website using HTML + JavaScript and a Node.js API.
-See it live [here](https://gray-hill-0afb0d903.azurestaticapps.net).
+See it live [here](https://blue-beach-0214f4003.5.azurestaticapps.net).
 
 ## Working in VS Code
 
