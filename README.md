@@ -29,6 +29,9 @@ Functions:
         ...
 Azure Static Web Apps emulator started at http://localhost:4280. Press CTRL+C to exit.
 ```
+## Deploy 
+
+To deploy to Azure use Visual Studio Code.
 
 ## What's Azure *SWAG*?
 
