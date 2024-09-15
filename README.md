@@ -31,7 +31,10 @@ Azure Static Web Apps emulator started at http://localhost:4280. Press CTRL+C to
 ```
 ## Deploy 
 
-To deploy to Azure use Visual Studio Code.
+To deploy to Azure use Visual Studio Code nad proper extension and check:
+```xml
+azure-static-web-apps-blue-beach-0214f4003.yml
+```
 
 ## What's Azure *SWAG*?
 
@@ -45,3 +48,5 @@ Take a look at [the official docs](https://docs.microsoft.com/azure/static-web-a
 
 ## Reference
 [Add an API to Azure Static Web Apps with Azure Functions](https://learn.microsoft.com/en-us/azure/static-web-apps/add-api?tabs=vanilla-javascript)
+
+[Debugging Azure Static Web Apps in VS Code](https://dev.to/azure/debugging-azure-static-web-apps-in-vs-code-3gmm)
